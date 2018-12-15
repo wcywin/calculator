@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 
     <title>Calculator - exercise</title>
@@ -13,9 +13,55 @@
 </head>
 <body>
 
+    <article class="it-calc">
 
+        <section class="it-calc__display">
+            <div class="it-calc__flex-elements">
+                <div class="it-calc__current-operation" id="it-calc-operation">0</div>
+                <span class="it-calc__current-operation it-calc__fixed-equal-sign">=</span>
+            </div>
+            <div class="it-calc__result" id="it-calc-result">0</div>
+        </section>
 
-<script src="js/app.js"></script>
+        <section class="it-calc__flex-group">
+
+            <div class="it-calc__left-group">
+
+                <div class="it-calc__end-point">
+                    <span class="it-btn it-btn__ac" id="it-calc-clear">AC</span>
+                    <span class="it-btn it-btn__save" id="it-calc-save">SAVE</span>
+                </div>
+
+                <div class="it-calc__numbers">
+                    <span class="it-btn it-btn__number" id="it-calc-dot">.</span>
+                    <span class="it-btn it-btn__number">0</span>
+                    <span class="it-btn it-btn__empty"></span>
+                    <span class="it-btn it-btn__number">1</span>
+                    <span class="it-btn it-btn__number">2</span>
+                    <span class="it-btn it-btn__number">3</span>
+                    <span class="it-btn it-btn__number">4</span>
+                    <span class="it-btn it-btn__number">5</span>
+                    <span class="it-btn it-btn__number">6</span>
+                    <span class="it-btn it-btn__number">7</span>
+                    <span class="it-btn it-btn__number">8</span>
+                    <span class="it-btn it-btn__number">9</span>
+                </div>
+
+            </div>
+
+            <section class="it-calc__operators">
+                <span class="it-btn it-btn__operator">&#247;</span>
+                <span class="it-btn it-btn__operator">x</span>
+                <span class="it-btn it-btn__operator">-</span>
+                <span class="it-btn it-btn__operator">+</span>
+                <span class="it-btn it-btn__operator" id="it-calc-equal">=</span>
+            </section>
+
+        </section>
+
+    </article>
+
+    <script src="js/app.js"></script>
 
 </body>
 </html>

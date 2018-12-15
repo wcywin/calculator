@@ -1,0 +1,60 @@
+@mixin buttonHover($color, $amount) {
+  background-color: darken($color, $amount);
+  transition: all 100ms ease-in-out;
+  cursor: pointer;
+}
+
+.it-btn {
+  width: 6rem;
+  height: 6rem;
+  font-size: 2.4rem;
+  padding: 1.2rem 1rem;
+  text-align: center;
+  border-bottom: 2px solid rgba(1,1,1,0.15);
+  flex-grow: 1;
+
+  // red buttons
+  &__ac {
+    text-transform: uppercase;
+    width: 6.3rem;
+    flex-grow: 0;
+
+    &:hover,
+    &:focus,
+    &:active {
+      @include buttonHover($it-red, 10%);
+    }
+  }
+
+  &__save {
+    text-transform: uppercase;
+    flex-grow: 1;
+
+    &:hover,
+    &:focus,
+    &:active {
+      @include buttonHover($it-red, 10%);
+    }
+  }
+
+  // pink buttons
+  &__number {
+    &:hover,
+    &:focus,
+    &:active {
+      @include buttonHover($it-pink, 10%);
+    }
+  }
+
+  // yellow buttons
+  &__operator {
+    padding: 1.1rem 1rem;
+
+    &:hover,
+    &:focus,
+    &:active {
+      @include buttonHover($it-yellow, 10%);
+    }
+  }
+}
+

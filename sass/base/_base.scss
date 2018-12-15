@@ -1,0 +1,23 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; // 1rem = 10px;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: $font-primary;
+  color: $it-white;
+  font-size: 16px;
+  line-height: 1.5;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: #d6d6d6;
+}
