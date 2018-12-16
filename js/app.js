@@ -117,3 +117,21 @@ const clearCalculation = () => {
 numberBtnsArray.map(val => val.addEventListener('click', updateDisplayOperation));
 operatorBtnsArray.map(val => val.addEventListener('click', doTheCalculation));
 clearBtn.addEventListener('click', clearCalculation);
+
+// Fetch data to save the result
+saveBtn.addEventListener('click', () => {
+
+    // Form data for POST request
+    let formData = new FormData();
+    formData.append('sum', resultValue.innerText);
+
+    const url = 'https://www.cywinski.pro/calc/store.php';
+
+    fetch(url, {
+        method: 'POST',
+        mode: "cors",
+        body: formData,
+    }).then(res => res.json())
+    .then(response => console.log('Response:', JSON.stringify(response)))
+    .catch(error => console.error('Error:', error));
+});
