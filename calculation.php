@@ -11,37 +11,39 @@
     <title>Results - Calculator ITM</title>
 </head>
 <body>
-    <h1>Results</h1>
+    <article class="it-php__layout">
+        <h1 class="it-php__heading">Results</h1>
 
-    <?php
-    // Get data from *.csv file as array
-    $results = array_map('str_getcsv', file('results.csv'));
-
-    // Reverse array to get newest results on top
-    $reversed = array_reverse($results);
-    ?>
-
-    <table>
-        <thead>
-        <th>Sum</th>
-        <th>IP</th>
-        <th>Date</th>
-        <th>Browser</th>
-        </thead>
-
-        <tbody>
         <?php
-        // Loop through each row and cell and display it
-        foreach($reversed as $row) {
-            echo "\t<tr>\r\n";
-            foreach($row as $cell) {
-                echo "\t\t<td>$cell</td>\r\n";
-            }
-            echo "\t</tr>\r\n";
-        }
-        ?>
-        </tbody>
-    </table>
 
+        // Get data from *.csv file as array
+        $results = array_map('str_getcsv', file('results.csv'));
+
+        // Reverse array to get newest results on top
+        $reversed = array_reverse($results);
+        ?>
+
+        <table class="it-php-table">
+            <thead>
+            <th>Sum</th>
+            <th>IP</th>
+            <th>Date</th>
+            <th>Browser</th>
+            </thead>
+
+            <tbody>
+            <?php
+            // Loop through each row and cell and display it
+            foreach($reversed as $row) {
+                echo "\t<tr>\r\n";
+                foreach($row as $cell) {
+                    echo "\t\t<td>$cell</td>\r\n";
+                }
+                echo "\t</tr>\r\n";
+            }
+            ?>
+            </tbody>
+        </table>
+    </article>
 </body>
 </html>
