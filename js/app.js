@@ -132,6 +132,14 @@ saveBtn.addEventListener('click', () => {
         mode: "cors",
         body: formData,
     }).then(res => res.json())
-    .then(response => console.log('Response:', JSON.stringify(response)))
-    .catch(error => console.error('Error:', error));
+    // .then(response => alert('Response:' + JSON.stringify(response)))
+    .then(response => {
+        if(response.success){
+            alert(response.success)
+        } else {
+            alert(response.error)
+        }
+    })
+    // .catch(error => alert('Error:' + error));
+    .catch(error => alert(error));
 });
